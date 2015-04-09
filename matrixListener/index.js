@@ -10,7 +10,6 @@ var client = matrix.createClient(process.env.HOST || "http://localhost:8008");
 
 var poll = function(lastMsg){
   client.eventStream(lastMsg, 600000, function(err, res){
-    console.log("last msg: " + lastMsg);
     handleMessages(res.chunk);
     lastMsg = res.end;
     poll(lastMsg);
@@ -24,8 +23,18 @@ var startPolling = function(){
 }
 
 var handleMessages = function(msgs){
+  var msg;
   for( var i =0;i< msgs.length;i++){
-    console.log(JSON.stringify(msgs[i]));
+    msg = msgs[i];
+    if(msg.content && msg.content.msgtype === "m.text"){
+      try {
+        var msgObj = JSON.parse(msg.content.body);
+        console.log("Command: " + msgObj.command + " Direction: " + msgObj.direction || "not provided");
+      }catch(e)
+      {
+        //ignore it
+      }
+    }
   }
 }
 
