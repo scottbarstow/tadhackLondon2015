@@ -1,0 +1,26 @@
+extends ../layout
+
+
+block content
+  div.container
+    h1 Welcome to Canary Bot!
+    p.
+    button(id="create-connection").btn.btn-primary Connect To Canary
+    p.
+    div#navButtons
+      button(id="btnFwd", value="fwd").btn.btn-success Forward
+      button(id="btnBack", value="back").btn.btn-info Back
+      button(id="btnLeft", value="left").btn.btn-warning Left
+      button(id="btnRight", value="right").btn.btn-danger Right
+
+    p.
+    div#videoHolder
+      video(id="selfView", autoPlay="true")
+      video(id="remoteView", autoPlay="true")
+
+
+
+block scripts
+  script(src="https://cdn.socket.io/socket.io-1.2.0.js")
+  script(src="/static/js/app.js")
+  script(src="/static/js/nav.js")
