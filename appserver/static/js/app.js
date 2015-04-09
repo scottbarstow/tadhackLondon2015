@@ -45,8 +45,8 @@ socket.on("fromMatrix", function(data){
   console.log("got matrix event: " + JSON.stringify(data));
 })
 
-var createButton = document.getElementById('create-connection');
-createButton.onclick = startCall;
+// var createButton = document.getElementById('create-connection');
+// createButton.onclick = startCall;
 //setupConnection();
 
 

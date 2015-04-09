@@ -3,24 +3,44 @@ extends ../layout
 
 block content
   div.container
-    h1 Welcome to Canary Bot!
+    h1 Welcome to Matrix Bot!
     p.
-    button(id="create-connection").btn.btn-primary Connect To Canary
     p.
-    div#navButtons
-      button(id="btnFwd", value="fwd").btn.btn-success Forward
-      button(id="btnBack", value="back").btn.btn-info Back
-      button(id="btnLeft", value="left").btn.btn-warning Left
-      button(id="btnRight", value="right").btn.btn-danger Right
+    //button(id="start", autocomplete="off").btn.btn-primary Start
+    //button(id="stop", autocomplete="off").btn.btn-danger Stop
+    button(autocomplete="off", id="watch").btn.btn-primary Connect
 
-    p.
-    div#videoHolder
-      video(id="selfView", autoPlay="true")
-      video(id="remoteView", autoPlay="true")
+    div.row
+      div.col-md-12
+        div.container#streams
+          div.row
+            div.col-md-12
+              center
+                button(id="btnFwd", value="fwd").btn.btn-success Forward
+          p.
+
+          div#navButtons
+            div.row
+              div.col-md-1
+                button(id="btnLeft", value="left").btn.btn-warning Left
+              div.col-md-10
+                div.panel.panel-default
+                  div.panel-heading
+                    h3.panel-title Live Feed
+                  div.panel-body#stream
+              div.col-md-1
+                button(id="btnRight", value="left").btn.btn-warning Right
+            div.row
+              div.col-md-12
+                center
+                  button(id="btnBack", value="fwd").btn.btn-success Back
+          p.
 
 
 
-block scripts
-  script(src="https://cdn.socket.io/socket.io-1.2.0.js")
-  script(src="/static/js/app.js")
-  script(src="/static/js/nav.js")
+
+
+
+
+
+

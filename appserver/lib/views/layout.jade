@@ -4,8 +4,18 @@ html(lang="en")
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    script(src="http://code.jquery.com/jquery-1.11.2.min.js")
     link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+    script(src="https://cdn.socket.io/socket.io-1.2.0.js")
+    script(src="/static/js/jquery.min.js")
+    script(src="/static/js/bootstrap.min.js")
+    script(src="/static/js/app.js")
+    script(src="/static/js/nav.js")
+    script(src="/static/js/bootbox.min.js")
+    script(src="/static/js/spin.min.js")
+    script(src="/static/js/janus.js")
+    script(src="/static/js/streamingtest.js")
+    script(src="/static/js/adapter.js")
+
   body
     if typeof error != "undefined"
       div.alert.alert-danger= error
@@ -14,7 +24,7 @@ html(lang="en")
     .container-fluid.content-container
       div(role="navigation").navbar.navbar-default#navigator
         .container-fluid
-          a.navbar-brand(href="#") Canary Bot!
+          a.navbar-brand(href="#") Matrix Bot!
           if typeof user != "undefined"
       .container-fluid
         div(style="display:none;").alert.alert-danger#error
