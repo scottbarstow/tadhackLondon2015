@@ -1,7 +1,6 @@
 "use strict";
 var Path = require("path")
 var Hapi     = require("hapi");
-var Routes  = require('./routes')
 var server = module.exports = new Hapi.Server();
 
 server.connection({
@@ -61,8 +60,6 @@ server.register([
   //   if(err){console.log(err)};
   // }
 );
-
-server.route(Routes.endpoints);
 
 server.ext('onRequest', function (request, reply) {
     console.log("Got request: " + request.path, request.query);
