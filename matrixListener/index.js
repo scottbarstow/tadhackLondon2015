@@ -1,5 +1,11 @@
+var host = process.env.HOST || "http://localhost:8008";
+var user = process.env.MATRIX_USER || "test";
+var password = process.env.MATRIX_PASSWORD || "password";
+
 var matrix = require("matrix-js-sdk");
-var client = matrix.createClient("http://localhost:8008");
+var client = matrix.createClient(process.env.HOST || "http://localhost:8008");
+
+
 
 
 var poll = function(lastMsg){
@@ -23,7 +29,7 @@ var handleMessages = function(msgs){
   }
 }
 
-client.login("m.login.password", {"user":"test", "password":"password"}, function(err,res){
+client.login("m.login.password", {"user":user, "password":password}, function(err,res){
   if(err){
     console.log("Couldn't login to matrix: " + err.message);
   }else {
