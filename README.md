@@ -7,10 +7,33 @@ In the demonstration app, we have enabled a Raspberry Pi to drive a robot using 
 
 ## Software Components
 
+All of the software we wrote for this project was done in Node 12.
+
+You'll need a couple of prerequisites to get this going.
+
+```
+npm install -g grunt bower
+```
+
 The [Matrix Listener](matrixListener), which subscribes to a room in matrix and listens to all events for the room
 
-The App Server, which has a simple browser that streams the video and provides basic controls for the device.
+```
+cd matrixListener
+npm install
+HOST=yourmatrixhost MATRIX_USER=user MATRIX_PASSWORD=password npm start
+```
 
+
+The [App Server](appServer), which has a simple browser that streams the video and provides basic controls for the device.
+
+```
+cd appServer
+npm install
+HOST=localhost PORT=3000 npm start
+
+then browse to 
+http://localhost:3000/canary
+```
 
 
 The app itself is written in NodeJS for all components.
