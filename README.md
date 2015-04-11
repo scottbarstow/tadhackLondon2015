@@ -44,6 +44,7 @@ Special thanks to the folks who wrote the [Janus Gateway](https://github.com/mee
 ## Hardware Components
 
 [The Multi-Chassis Tank](https://www.sparkfun.com/products/12091)
+
 [The SparkFun Motor Driver](https://www.sparkfun.com/products/9457)
 
 
