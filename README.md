@@ -13,7 +13,7 @@ When you browse to the app server and connect to the stream, we load the stream 
 
 As the user clicks the navigation buttons, we send messages through a Matrix room to the device.  The device uses a simple listener app to consume all new messages from the room, ignore the ones it doesn't care about, and processes the navigation messages.
 
-The navigation messages are then sent to the motor on the robot via GPIO. 
+We control two DC motors through GPIO on a Raspberry Pi. We step power up from the Raspberry Pi’s 3.3 volts to 7.5 volts for the motors using a PWM motor controller. 
 
 ## Software Components
 
