@@ -5,7 +5,7 @@ This is an experimental project by Anders Brownworth and Scott Barstow to demons
 
 In the demonstration app, we have enabled a Raspberry Pi to drive a robot using WebRTC and live streaming of video from a Janus Gateway on the device.
 
-[Watch The Video](https://youtube.com/something)
+[Watch The Video](https://www.youtube.com/watch?v=gvDIkqyxnac&feature=youtu.be)
 
 ## How It Works
 
