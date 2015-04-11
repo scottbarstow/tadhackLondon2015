@@ -5,6 +5,9 @@ This is an experimental project by Anders Brownworth and Scott Barstow to demons
 
 In the demonstration app, we have enabled a Raspberry Pi to drive a robot using WebRTC and live streaming of video from a Janus Gateway on the device.
 
+[Watch The Video](https://youtube.com/something)
+
+
 ## Software Components
 
 All of the software we wrote for this project was done in Node 12.
@@ -35,13 +38,17 @@ then browse to
 http://localhost:3000/canary
 ```
 
+Special thanks to the folks who wrote the [Janus Gateway](https://github.com/meetecho/janus-gateway) which allowed us to stream video right off of the device using WebRTC
 
-The app itself is written in NodeJS for all components.
 
-bought from [SparkFun](https://www.sparkfun.com/products/12091)
+## Hardware Components
 
-https://www.sparkfun.com/products/12091
+[The Multi-Chassis Tank](https://www.sparkfun.com/products/12091)
+[The SparkFun Motor Driver](https://www.sparkfun.com/products/9457)
 
-https://www.sparkfun.com/products/9457
 
-https://github.com/meetecho/janus-gateway
+## Special Thanks
+
+We'd like to thank all of the sponsors of TADHack 2015 London, with special thanks to the folks from [Matrix.org](http://matrix.org) for the help they provided in getting our app working with their platform.
+
+We'll be posting additional videos here on how we put the hardware together once we have a breath!
