@@ -9,7 +9,7 @@ In the demonstration app, we have enabled a Raspberry Pi to drive a robot using 
 
 ## How It Works
 
-When you browse to the app server and connect to the stream, we load the stream from the Janus gateway.  The app server also connects to Matrix as it loads, with a specific room to send messages to.
+When you browse to the app server and connect to the stream, we load the stream from the Janus gateway running on the Pi.  The app server also connects to Matrix as it loads, with a specific room to send messages to.  We use socket.io to push messages to and from Matrix within the app.
 
 As the user clicks the navigation buttons, we send messages through a Matrix room to the device.  The device uses a simple listener app to consume all new messages from the room, ignore the ones it doesn't care about, and processes the navigation messages.
 
